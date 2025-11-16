@@ -7,36 +7,67 @@ The goal was to understand customer behavior, identify churn risk, segment custo
 
 The workflow includes:
 
-Data Cleaning & Feature Engineering (Python)
+* Data Cleaning & Feature Engineering (Python)
 
-Business Questions Answered (SQL)
+* Business Questions Answered (SQL)
 
-Interactive Dashboard (Power BI)
+* Interactive Dashboard (Power BI)
 
 Project Overview
 
 The dataset included customer attributes such as:
 
-Age, Gender
+->Age, Gender
+->Item Purchased, Category
+->Purchase Amount
+->Location
+->Size, Color, Season
+->Review Rating
+->Subscription Status
+->Shipping Type
+->Discount Applied, Promo Code Used
+->Previous Purchases
+->Payment Method
+->Frequency of Purchases
 
-Item Purchased, Category
+All data cleaning and processing was done in a Jupyter Notebook.
 
-Purchase Amount
+Key cleaning steps:
 
-Location
+o Removed inconsistencies & standardized column names
+o Handled missing values
+o Converted frequencies (Weekly, Monthly, Annually etc.) → Days
+o Created new features like:
+->purchase_frequency_days
+->age_group
 
-Size, Color, Season
+The SQL analysis helped uncover:
+->Top contributing demographics
+->Revenue-driving products and sizes
+->Customer satisfaction patterns
+->Subscription value & behavior
+->High-value vs discount-driven customers
+->Churn-prone customer groups
+->Category-wise product performance
+->Customer segmentation based on purchase history
 
-Review Rating
+These insights were later integrated into the Power BI Dashboard for interactive visualization.
 
-Subscription Status
+A Power BI report was created to visualize the cleaned dataset and analytical outputs.
 
-Shipping Type
+Dashboard includes visuals for:
+Customer Segments
+->Total Sales & Revenue
+->Review Ratings Distribution
+->Subscription Analysis
+->Seasonal Buying Trends
+->Shipping Type Breakdown
 
-Discount Applied, Promo Code Used
+Interactive slicers allow filtering by:
+->Gender
+->Shipping Type
+->Category
+->Subscription Status
 
-Previous Purchases
 
-Payment Method
 
-Frequency of Purchases
